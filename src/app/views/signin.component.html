@@ -1,0 +1,66 @@
+<section class="cover-wide login-cvr-bg" [ngStyle]="{'background':'url(/assets/Images/Site/login-bg.png)'}">
+    <div class="container">
+        <p class="signnow">Sign In</p>
+    </div>
+    </section>
+    
+    <section class="panel-cover bitPad">
+    <div class="panel-box">
+
+      <form class="form-horizontal" (ngSubmit)="onSubmit()"  id="logniForm">
+        <p class="title">Account Sign In</p>
+      
+        <hr>
+        <p class="inpTitle">Email<span></span></p>
+        <input type="email" name="Email" [(ngModel)]="Login.email">
+     
+        <p></p>
+        <p class="inpTitle">Password<span></span></p>
+        <input type="password" name="Password" [(ngModel)]="Login.password">      
+      
+        
+        <button class="pull-right btn" type="submit">Sign In</button>
+        <div class="clearfix"></div>
+        <div style="width:100%; height:15px;"></div>
+        <hr style="margin-bottom:8px">
+        <p class="pfoot">Don't have an Account? <a href="/account/signup">Sign Up now!</a></p>
+        <p class="pfoot2">Forgot your password?<a href="#" data-target="#pwdModal" data-toggle="modal">Recover Password</a></p>
+      </form>
+        <!--modal-->
+        <div id="pwdModal" class="modal fade recover-pass00" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h1 class="text-center">What's My Password?</h1>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="text-center">
+    
+                                        <p>If you have forgotten your password you can reset it here.</p>
+                                        <div class="panel-body">
+                                            <fieldset>
+                                                <div class="form-group">
+                                                    <input class="form-control input-lg" placeholder="E-mail Address" name="email" type="email">
+                                                </div>
+                                                <input class="btn btn-lg btn-primary btn-block" value="Send My Password" type="submit">
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-md-12">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
